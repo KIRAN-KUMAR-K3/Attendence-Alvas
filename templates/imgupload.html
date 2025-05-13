@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Upload</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+  body {font-family: Arial, Helvetica, sans-serif;
+background-image:url(https://www.texasobserver.org/wp-content/uploads/2020/02/treated-1536x940.png);
+background-repeat : no-repeat;
+background-size : cover;
+
+}
+
+
+
+.btnclass{
+margin-top: 150px;
+margin-left:500px;
+
+}
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+
+    .submit{
+    color:black;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Movie Prediction</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+  <div class="btnclass" data-provides="fileupload">
+
+<form action="/classify" method="post" enctype="multipart/form-data">
+      <span class="btn btn-primary btn-file">
+          <span><input type="file" accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"/>
+              <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+              <p><img id="output" width="200" /></p>
+              </span>
+
+          <span>
+              <input type="submit" class="submit" name="Classify" value="Classify">
+          </span>
+
+
+
+      </span>
+    </form>
+
+  </div>
+
+
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+
+
+</body>
+</html>
