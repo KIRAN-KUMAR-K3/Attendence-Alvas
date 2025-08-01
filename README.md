@@ -6,7 +6,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/KIRAN-KUMAR-K3/Attendence-Alvas?style=for-the-badge" />
+<a href="https://github.com/KIRAN-KUMAR-K3/Attendence-Alvas/blob/main/LICENSE">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License">
+</a>
   <img src="https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python" />
   <img src="https://img.shields.io/badge/OpenCV-Face%20Recognition-success?style=for-the-badge&logo=opencv" />
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
